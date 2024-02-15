@@ -105,18 +105,15 @@ function Sectionh8() {
                                             <a href="#">Business</a>
                                         </div>
                                     </div>
-
                                     <h4 class="title"><a href="/Blog-Details">Culture & Leadership: Strategies for a Successful Business</a></h4>
 
                                     <div class="blog-meta">
                                         <span> <i class="icofont-calendar"></i> 21 March, 2021</span>
                                         <span> <i class="icofont-heart"></i> 2,568+ </span>
                                     </div>
-
                                     <a href="/Blog-Details" class="btn btn-secondary btn-hover-primary">Read More</a>
                                 </div>
                             </div>
-                           
 
                         </div>
                     </div>

@@ -2,7 +2,7 @@
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import $ from 'jquery';
-import  { useState } from 'react';
+
 (function ($) {
   "useState";
   var $wrapper = $('.main-wrapper');
@@ -18,6 +18,7 @@ import  { useState } from 'react';
       $(".header-main").addClass("sticky");
     }
   });
+  
   
   const listItems = document.querySelectorAll(".submenu ul");
   

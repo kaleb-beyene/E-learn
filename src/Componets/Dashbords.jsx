@@ -1,29 +1,25 @@
 import React from 'react'
 
-function Adashboard() {	
-	
+function Dashbords() {
   return (
     <div>
-  <div class="header">  
+        <div class="header">  
             <div class="header-left">
                 <a href="/home" class="logo">
-                    <img src="assets/images/logo.png" alt="Logo"/>
+                    <img src="assets/images/logo-icon.png" alt="Logo"/>
                 </a>
                 <a href="index.html" class="logo logo-small">
                     <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"/>
                 </a>
-            </div>   
-			<div class="menu-toggle">
-					<a href="javascript:void(0);" id="toggle_btn">
-						<i class="fas fa-bars"></i>
-					</a>
-				</div>         
+            </div>
+                 
             <div class="top-nav-search">
                 <form>
                     <input type="text" class="form-control" placeholder="Search here"/>
                     <button class="btn" type="submit"><i class="flaticon-magnifying-glass"></i></button>
                 </form>
             </div>
+           
             <ul class="nav user-menu">
                 <li class="nav-item dropdown noti-dropdown me-2">
                     <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
@@ -95,12 +91,20 @@ function Adashboard() {
                         </div>
                     </div>
                 </li>
+               
+                <li  class="nav-item zoom-screen me-2">
+                    <a href="#" class="nav-link header-nav-list win-maximize">
+                        <img src="assets/images/icon/header-icon-04.svg" alt=""/>
+                    </a>
+                </li>
+                
+                
                 <li class="nav-item dropdown has-arrow new-user-menus">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <div class="user-img">
                             <img class="rounded-circle" src="assets/images/author/author-03.jpg" width="31" alt="Ryan Taylor"/>
                             <div class="user-text">
-                               
+                                <h6>Ryan Taylor</h6>
                                 
                             </div>
                         </div>
@@ -112,14 +116,15 @@ function Adashboard() {
                             </div>
                             <div class="user-text">
                                 
-                                <p class="text-muted mb-0">Administrator</p>
+                                
                             </div>
                         </div>
                         <a class="dropdown-item" href="/profile">My Profile</a>
-                        <a class="dropdown-item" href="inbox.html">Inbox</a>
+                        
                         <a class="dropdown-item" href="/login">Logout</a>
                     </div>
                 </li>
+
             </ul>   
         </div>
         <div class="sidebars" id="sidebars">
@@ -127,32 +132,55 @@ function Adashboard() {
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="menu-title"> 
-								<span>Dashboard</span>
+								<span>Main Menu</span>
 							</li>
-							
+                            <li> 
+                   <a href="/students"> <i class="fas fa-house"></i> <span>Dashboard</span></a>
+                     </li>
+                          <li> 
+                     <a href="mycourses"><i class="fas fa-book-reader"></i> <span>My courses</span></a>
+                     </li>
 							<li class="submenu">
-								<a href="/List"><i class="fas fa-graduation-cap"></i> <span> Students</span> </a>
-							</li>
-							
-							<li class="submenu">
-								<a href="/Coursesection"><i class="fas fa-book-reader"></i> <span>courses</span></a>
-							</li>
-							
-							
-							
-						
-							<li> 
-								<a href="/profile"><i class="fas fa-cog"></i> <span>Settings</span></a>
+								<a href="#"><i class="fas fa-clipboard"></i> <span> Invoices</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="invoices.html">Invoices List</a></li>
+									<li><a href="invoice-grid.html">Invoices Grid</a></li>
+									<li><a href="add-invoice.html">Add Invoices</a></li>
+									<li><a href="edit-invoice.html">Edit Invoices</a></li>
+									<li><a href="view-invoice.html">Invoices Details</a></li>
+									<li><a href="invoices-settings.html">Invoices Settings</a></li>
+								</ul>
 							</li>
 							<li class="menu-title"> 
-								<span>Authentication</span>
+								<span>Management</span>
 							</li>
-							
-							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
-							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
-							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
-							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
-							
+							<li class="submenu">
+								<a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
+								<ul>
+									<li><a href="fees-collections.html">Fees Collection</a></li>
+									<li><a href="expenses.html">Expenses</a></li>
+									<li><a href="salary.html">Salary</a></li>
+									<li><a href="add-fees-collection.html">Add Fees</a></li>
+									<li><a href="add-expenses.html">Add Expenses</a></li>
+									<li><a href="add-salary.html">Add Salary</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+                                <a href="#"><i class="fa fa-newspaper"></i> <span> Blogs</span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul>
+                                    <li><a href="blog.html">All Blogs</a></li>
+                                    <li><a href="add-blog.html">Add Blog</a></li>
+                                    <li><a href="edit-blog.html">Edit Blog</a></li>  
+                                </ul>
+                            </li>
+							<li> 
+								<a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+							</li>
+							<li class="menu-title"> 
+								<span>Pages</span>
+							</li>
 								</ul>
 					</div>
                 </div>
@@ -163,14 +191,15 @@ function Adashboard() {
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="page-sub-header">
-									<h3 class="page-title">Welcome Admin!</h3>	
+									<h3 class="page-title">Welcome!</h3>	
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xl-3 col-sm-6 col-12 d-flex">
-							<div class="card bg-comman w-100">
+                    <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                                    <div class="single-courses">
+                                    <div class="card bg-comman w-100">
 								<div class="card-body">
 									<div class="db-widgets d-flex justify-content-between align-items-center">
 										<div class="db-info">
@@ -183,101 +212,53 @@ function Adashboard() {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12 d-flex">
-							<div class="card bg-comman w-100">
-								<div class="card-body">
-									<div class="db-widgets d-flex justify-content-between align-items-center">
-										<div class="db-info">
-											<h6>Awards</h6>
-											<h3>50+</h3>
-										</div>		
-										<div class="db-icon">
-											<img  src="assets/images/icon/dash-icon-02.svg"  alt="Dashboard Icon"/>
-										</div>	
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12 d-flex">
-							<div class="card bg-comman w-100">
-								<div class="card-body">
-									<div class="db-widgets d-flex justify-content-between align-items-center">
-										<div class="db-info">
-											<h6>Courses</h6>
-											<h3>30+</h3>
-										</div>
-										<div class="db-icon">
-											<img  src="assets/images/icon/dash-icon-03.svg"  alt="Dashboard Icon"/>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-3 col-sm-6 col-12 d-flex">
-							<div class="card bg-comman w-100">
-								<div class="card-body">
-									<div class="db-widgets d-flex justify-content-between align-items-center">
-										<div class="db-info">
-											<h6>Revenue</h6>
-											<h3>$505</h3>
-										</div>	
-										<div class="db-icon">
-											<img  src="assets/images/icon/dash-icon-04.svg"  alt="Dashboard Icon"/>
-										</div>	
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-lg-6">
-							<div class="card card-chart">
-								<div class="card-header">
-									<div class="row align-items-center">
-										<div class="col-6">
-											<h5 class="card-title">Overview</h5>
-										</div>
-										<div class="col-6">
-											<ul class="chart-list-out">
-												<li><span class="circle-blue"></span>Teacher</li>
-												<li><span class="circle-green"></span>Student</li>
-												<li class="star-menus"><a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a></li>
-											</ul>                                       
-										</div>
-									</div>						
-								</div>
-								<div class="card-body">
-									<div id="apexcharts-area"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12 col-lg-6">
-							<div class="card card-chart">
-								<div class="card-header">
-									<div class="row align-items-center">
-										<div class="col-6">
-											<h5 class="card-title">Number of Students</h5>
-										</div>
-										<div class="col-6">
-											<ul class="chart-list-out">
-												<li><span class="circle-blue"></span>Girls</li>
-												<li><span class="circle-green"></span>Boys</li>
-												<li class="star-menus"><a href="javascript:;"><i class="fas fa-ellipsis-v"></i></a></li>
-											</ul>                                       
-										</div>
-									</div>									
-								</div>
-								<div class="card-body">
-									<div id="bar"></div>
-								</div>
-							</div>
-													
-						</div>	
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-courses">
+                                        <div class="courses-images">
+                                            <a href="/courses-details"><img src="assets/images/courses/courses-08.jpg" alt="Courses"/></a>
+                                        </div>
+                                        <div class="courses-content">
+                                            <div class="courses-author">
+                                                <div class="author">
+                                                    <div class="author-thumb">
+                                                        <a href="#"><img src="assets/images/author/author-01.jpg" alt="Author"/></a>
+                                                    </div>
+                                                    <div class="author-name">
+                                                        <a class="name" href="#">Jason Williams</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tag">
+                                                    <a href="#">Science</a>
+                                                </div>
+                                            </div>
+                                            <h4 class="title"><a href="/courses-details">Data Science and Machine Learning with Python - Hands On!</a></h4>
+                                            <div class="courses-meta">
+                                                <span> <i class="icofont-clock-time"></i> 08 hr 15 mins</span>
+                                                <span> <i class="icofont-read-book"></i> 29 Lectures </span>
+                                            </div>
+                                            <div class="courses-price-review">
+                                                <div class="courses-price">
+                                                    <span class="sale-parice">$385.00</span>
+                                                    <span class="old-parice">$440.00</span>
+                                                </div>
+                                                <div class="courses-review">
+                                                    <span class="rating-count">4.9</span>
+                                                    <span class="rating-star">
+															<span class="rating-bar" styleobject="=width: 80%;"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              
 					</div>
 					
 					
-					
+						
 				</div>
 				
 			</div>
@@ -285,4 +266,4 @@ function Adashboard() {
   )
 }
 
-export default Adashboard;
+export default Dashbords

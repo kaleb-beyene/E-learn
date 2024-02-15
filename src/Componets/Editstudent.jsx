@@ -1,25 +1,28 @@
 import React from 'react'
 
-function Dashbord() {
+function Editstudent() {
   return (
     <div>
-      <div class="header">  
+       <div class="header">  
             <div class="header-left">
                 <a href="/home" class="logo">
-                    <img src="assets/images/logo-icon.png" alt="Logo"/>
+                    <img src="assets/images/logo.png" alt="Logo"/>
                 </a>
                 <a href="index.html" class="logo logo-small">
                     <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30"/>
                 </a>
-            </div>
-                 
+            </div>   
+			<div class="menu-toggle">
+					<a href="javascript:void(0);" id="toggle_btn">
+						<i class="fas fa-bars"></i>
+					</a>
+				</div>         
             <div class="top-nav-search">
                 <form>
                     <input type="text" class="form-control" placeholder="Search here"/>
                     <button class="btn" type="submit"><i class="flaticon-magnifying-glass"></i></button>
                 </form>
             </div>
-           
             <ul class="nav user-menu">
                 <li class="nav-item dropdown noti-dropdown me-2">
                     <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
@@ -91,20 +94,12 @@ function Dashbord() {
                         </div>
                     </div>
                 </li>
-               
-                <li  class="nav-item zoom-screen me-2">
-                    <a href="#" class="nav-link header-nav-list win-maximize">
-                        <img src="assets/images/icon/header-icon-04.svg" alt=""/>
-                    </a>
-                </li>
-                
-                
                 <li class="nav-item dropdown has-arrow new-user-menus">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <div class="user-img">
                             <img class="rounded-circle" src="assets/images/author/author-03.jpg" width="31" alt="Ryan Taylor"/>
                             <div class="user-text">
-                                <h6>Ryan Taylor</h6>
+                               
                                 
                             </div>
                         </div>
@@ -116,15 +111,14 @@ function Dashbord() {
                             </div>
                             <div class="user-text">
                                 
-                                
+                                <p class="text-muted mb-0">Administrator</p>
                             </div>
                         </div>
                         <a class="dropdown-item" href="/profile">My Profile</a>
-                        
+                        <a class="dropdown-item" href="inbox.html">Inbox</a>
                         <a class="dropdown-item" href="/login">Logout</a>
                     </div>
                 </li>
-
             </ul>   
         </div>
         <div class="sidebars" id="sidebars">
@@ -132,76 +126,137 @@ function Dashbord() {
 					<div id="sidebar-menu" class="sidebar-menu">
 						<ul>
 							<li class="menu-title"> 
-								<span>Main Menu</span>
+								<span>Dashboard</span>
 							</li>
-                            <li> 
-                   <a href="/students"> <i class="fas fa-house"></i> <span>Dashboard</span></a>
-                     </li>
-                          <li> 
-                     <a href="mycourses"><i class="fas fa-book-reader"></i> <span>My courses</span></a>
-                     </li>
+							
 							<li class="submenu">
-								<a href="#"><i class="fas fa-clipboard"></i> <span> Invoices</span> <span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="invoices.html">Invoices List</a></li>
-									<li><a href="invoice-grid.html">Invoices Grid</a></li>
-									<li><a href="add-invoice.html">Add Invoices</a></li>
-									<li><a href="edit-invoice.html">Edit Invoices</a></li>
-									<li><a href="view-invoice.html">Invoices Details</a></li>
-									<li><a href="invoices-settings.html">Invoices Settings</a></li>
-								</ul>
+								<a href="/List"><i class="fas fa-graduation-cap"></i> <span> Students</span> </a>
 							</li>
-							<li class="menu-title"> 
-								<span>Management</span>
-							</li>
+							
 							<li class="submenu">
-								<a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
-								<ul>
-									<li><a href="fees-collections.html">Fees Collection</a></li>
-									<li><a href="expenses.html">Expenses</a></li>
-									<li><a href="salary.html">Salary</a></li>
-									<li><a href="add-fees-collection.html">Add Fees</a></li>
-									<li><a href="add-expenses.html">Add Expenses</a></li>
-									<li><a href="add-salary.html">Add Salary</a></li>
-								</ul>
+								<a href="/Coursesection"><i class="fas fa-book-reader"></i> <span>courses</span></a>
 							</li>
-							<li class="submenu">
-                                <a href="#"><i class="fa fa-newspaper"></i> <span> Blogs</span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul>
-                                    <li><a href="blog.html">All Blogs</a></li>
-                                    <li><a href="add-blog.html">Add Blog</a></li>
-                                    <li><a href="edit-blog.html">Edit Blog</a></li>  
-                                </ul>
-                            </li>
+							
+							
+							
+						
 							<li> 
-								<a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+								<a href="/profile"><i class="fas fa-cog"></i> <span>Settings</span></a>
 							</li>
 							<li class="menu-title"> 
-								<span>Pages</span>
+								<span>Authentication</span>
 							</li>
+							
+							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
+							<li><a href="/"><i class="fas fa-login"></i><span>Registeration</span></a></li>
+							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
+							<li><a href="/"><i class="fas fa-logout"></i><span>Login</span></a></li>
+							
 								</ul>
 					</div>
                 </div>
             </div>
             <div class="page-wrapper">
                 <div class="content container-fluid">
+				
+					
 					<div class="page-header">
-						<div class="row">
+						<div class="row align-items-center">
 							<div class="col-sm-12">
 								<div class="page-sub-header">
-									<h3 class="page-title">Welcome Admin!</h3>	
+									<h3 class="page-title">Add Students</h3>
+									
 								</div>
 							</div>
 						</div>
 					</div>
-                    
-				</div>
+					
 				
+					<div class="row">
+						<div class="col-sm-12">
+						
+							<div class="card comman-shadow">
+								<div class="card-body">
+									<form>
+										<div class="row">
+											<div class="col-12">
+												<h5 class="form-title student-info">Student Information <span><a href="javascript:;"><i class="feather-more-vertical"></i></a></span></h5>
+											</div>
+											<div class="col-12 col-sm-4">  
+												<div class="form-group local-forms">
+													<label >First Name <span class="login-danger"></span></label>
+													<input class="form-control" type="text" placeholder="Enter First Name" />
+												</div>
+											</div>
+											<div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >Last Name <span class="login-danger">*</span></label>
+													<input class="form-control" type="text" placeholder="Enter First Name" />
+												</div>
+											</div>
+											<div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >Gender <span class="login-danger">*</span></label>
+													<select class="form-control select">
+														<option>Female</option>
+														<option>Male</option>
+													  </select>
+												</div>
+											</div>
+											
+											
+											
+											
+											<div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >E-Mail <span class="login-danger">*</span></label>
+													<input class="form-control" type="text" placeholder="Enter Email Address"/>
+												</div>
+											</div>
+											<div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >Class <span class="login-danger">*</span></label>
+													<select class="form-control select">
+														<option>Please Select Class  </option>
+														<option>12</option>
+														<option>11</option>
+														<option>10</option>
+													  </select>
+												</div>
+											</div>
+										
+											
+											<div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >password </label>
+													<input class="form-control" type="password" placeholder="Enter password" />
+												</div>
+											</div>
+											<div class="col-12 col-sm-4">
+												<div class="form-group students-up-files">
+													<label>Upload Student Photo (150px X 150px)</label>
+													<div class="uplod">
+														<label class="file-upload image-upbtn mb-0">
+															Choose File <input type="file"/>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="student-submit">
+													<button type="submit" class="btn btn-primary">Submit</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>							
+						</div>					
+					</div>					
+				</div>				
 			</div>
     </div>
   )
 }
 
-export default Dashbord
+export default Editstudent

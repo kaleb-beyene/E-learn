@@ -1,54 +1,133 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function SectionR() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+ 
+  const navigate = useNavigate();
+
+  const handleUsernamechange = (value) => {
+    setUsername(value);
+  };
+  const handleEmailchange = (value) => {
+    setEmail(value);
+  };
+  const handlePasswordchange = (value) => {
+    setPassword(value);
+  };
+  
+
+
+  const handlesubmit = () =>{
+    
+const data ={
+    username :username,
+    email: email,
+    password: password,
+    roles: ["student"]
+};
+const url ="http://localhost:5213/api/Auth/Register";
+axios
+      .post(url, data)
+      .then((response) => {
+        alert("Registered Successfully!");
+        navigate("/Dashboard");
+ }).catch((error)=>{
+    alert(error);
+ })
+  
+}
   return (
     <div>
-
-<div class="section section-padding">
-            <div class="container">
-                <div class="register-login-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="register-login-images">
-                                <div class="shape-1">
-                                    <img src="assets/images/shape/shape-26.png" alt="Shape"/>
-                                </div>
-                                <div class="images">
-                                    <img src="assets/images/register-login.png" alt="Register Login"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="register-login-form">
-                                <h3 class="title">Registration <span>Now</span></h3>
-                                <div class="form-wrapper">
-                                    <form action="#">
-                                        <div class="single-form">
-                                            <input type="text" placeholder="Name"/>
-                                        </div>
-                                        <div class="single-form">
-                                            <input type="email" placeholder="Email"/>
-                                        </div>
-                                        <div class="single-form">
-                                            <input type="password" placeholder="Password"/>
-                                        </div>
-                                        <div class="single-form">
-                                            <input type="password" placeholder="Confirm Password"/>
-                                        </div>
-                                        <div class="single-form">
-                                            <button class="btn btn-primary btn-hover-dark w-100">Create an account</button>
-                                            <a class="btn btn-secondary btn-outline w-100" href="#">Sign up with Google</a>
-                                        </div>   
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="section section-padding">
+        <div class="container">
+          <div class="register-login-wrapper">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <div class="register-login-images">
+                  <div class="shape-1">
+                    <img src="assets/images/shape/shape-26.png" alt="Shape" />
+                  </div>
+                  <div class="images">
+                    <img
+                      src="assets/images/register-login.png"
+                      alt="Register Login"
+                    />
+                  </div>
                 </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="register-login-form">
+                  <h3 class="title">
+                    Registration <span>Now</span>
+                  </h3>
+                  <div class="form-wrapper">
+                    <form action="#">
+                      <div class="single-form">
+                        <input
+                          type="text"
+                          placeholder="username"
+                          onChange={(e) => handleUsernamechange(e.target.value)}
+                        />
+                      </div>
+                      <div class="single-form">
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          onChange={(e) => handleEmailchange(e.target.value)}
+                        />
+                      </div>
+                      <div class="single-form">
+                        <input
+                          type="password"
+                          placeholder="password"
+                          onChange={(e) => handlePasswordchange(e.target.value)}
+                        />
+                      </div>
+                      <div class="single-form">
+                        <input type="password" placeholder="Confirm Password"  
+        />
+                      </div>
+                      <div class="single-form">  
+                        <button class="btn btn-primary btn-hover-dark w-100" onClick={(e)  => handlesubmit()}>
+                          Create an account
+                        </button>
+                       
+                      </div>
+                      <div class="row">
+						<div class="col-xl-3  col-sm-6 col-12">
+								<div class="social-boxs">
+									<img  src="assets/images/icon/social-icon-01.svg"  alt="Social Icon"/>
+								</div>	
+						</div>
+						<div class="col-xl-3  col-sm-6 col-12">
+								<div class="social-boxs">
+									<img  src="assets/images/icon/social-icon-02.svg"  alt="Social Icon"/>
+								</div>	
+						</div>
+                        <div class="col-xl-3  col-sm-6 col-12">
+								<div class="social-boxs">
+									<img  src="assets/images/icon/social-icon-03.svg"  alt="Social Icon"/>
+								</div>	
+						</div>
+                        <div class="col-xl-3  col-sm-6 col-12">
+								<div class="social-boxs">
+									<img  src="assets/images/icon/social-icon-04.svg"  alt="Social Icon"/>
+								</div>	
+						</div>
+					</div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default SectionR
+export default SectionR;
