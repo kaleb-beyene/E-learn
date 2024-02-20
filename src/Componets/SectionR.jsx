@@ -120,10 +120,12 @@ function SectionR() {
                       <div class="row">
                         <div class="col-xl-3  col-sm-6 col-12">
                           <div class="social-boxs">
+                        
                             <img
                               src="assets/images/icon/social-icon-01.svg"
                               alt="Social Icon"
                             />
+                            
                           </div>
                         </div>
                         <div class="col-xl-3  col-sm-6 col-12">

@@ -16,7 +16,7 @@ function SectionL() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5213/api/Auth/login",
+        "http://localhost:5213/api/Auth/Login",
         { username, password }
       );
       const token = response.data.token;
@@ -24,14 +24,13 @@ function SectionL() {
       //this.user = this.userService.getCurrentUser()
       console.log(token);
       const isAuthenticated = true; // Replace with your actual authentication logic
-      const isAdmin = username === "Admin";
+    
       if (isAuthenticated) {
-        if (isAdmin) {
-          navigate("/Admin");
+       
         } else {
           navigate("/Dashboard");
         }
-      }
+      
     } catch (error) {
       alert(error);
     }
@@ -48,9 +47,9 @@ function SectionL() {
                 </div>
                 <div class="images">
                   <img
-                    src="assets/images/register-login.png"
-                    alt="Register Login"
-                  />
+                    src="assets/images/register-login.png"  alt="Register Login"
+                    />
+                  
                 </div>
               </div>
             </div>
@@ -76,9 +75,7 @@ function SectionL() {
                         value={password}
                         onChange={handlePasswordChange}
                       />
-                      <a href="/Forget-password" class="forgot-password-link">
-                        Forget Password?
-                      </a>
+                      
                     </div>
                     <div class="single-form">
                       <button

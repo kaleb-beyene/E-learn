@@ -9,7 +9,7 @@ import Courses from './pages/Courses';
 import CoursesDetails from './pages/Courses-details';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
-import Forgetpassword from './pages/Forget-password';
+import Studentcourse from './pages/Studentcourse';
 import Register from './pages/Register';
 import List from './pages/List';
 import Edit from './pages/Edit';
@@ -27,13 +27,13 @@ function App() {
         <Route path="list"element={<List/>}/>
         <Route path='Edit'element={<Edit/>}/>
         <Route path="Admin"element={<Admin/>}/>
+        <Route path='Studentcourse'element={<Studentcourse/>}/>
         <Route path="Courses"element={<Coursedash/>}/>
-       <Route path='Dashboard'element={<Dashboard/>}/>
+        <Route path='Dashboard'element={<Dashboard/>}/>
         <Route path="Contact"element={<Contact/>}/>
         <Route path="Courses"element={<Courses/>}/>
         <Route path="Courses-details"element={<CoursesDetails/>}/>
         <Route path="Login"element={<Login/>}/>
-        <Route path="Forget-password"element={<Forgetpassword/>}/>
         <Route path="Register"element={<Register/>}/>
       </Routes>
       </BrowserRouter>
