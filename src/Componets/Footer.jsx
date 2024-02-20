@@ -17,12 +17,12 @@ function Footer() {
                 
                 <div class="footer-widget">
                     <div class="widget-logo">
-                        <a href="#"><img src="assets/images/logo.png" alt="Logo"/></a>
+                        <a href="#"><img src="assets/images/logo-icon.png" alt="Logo"/></a>
                     </div>
 
                     <div class="widget-address">
                         <h4 class="footer-widget-title">Caribbean Ct</h4>
-                        <p>Haymarket, Virginia (VA).</p>
+                        <p> Virginia (VA).</p>
                     </div>
 
                     <ul class="widget-info">
@@ -30,7 +30,7 @@ function Footer() {
                             <p> <i class="flaticon-email"></i> <a href="mailto:address@gmail.com">address@gmail.com</a> </p>
                         </li>
                         <li>
-                            <p> <i class="flaticon-phone-call"></i> <a href="tel:9702621413">(970) 262-1413</a> </p>
+                            <p> <i class="flaticon-phone-call"></i> <a href="tel:9702621413">+251903692</a> </p>
                         </li>
                     </ul>
 
@@ -38,7 +38,7 @@ function Footer() {
                         <li><a href="#"><i class="flaticon-facebook"></i></a></li>
                         <li><a href="#"><i class="flaticon-twitter"></i></a></li>
                         <li><a href="#"><i class="flaticon-skype"></i></a></li>
-                        <li><a href="#"><i class="flaticon-instagram"></i></a></li>
+                        <li><a href="#"><i class="flaticon-Github"></i></a></li>
                     </ul>
                 </div>
                

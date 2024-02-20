@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function SectionR() {
+  const [FirstName, setFirstName] = useState("");
+  const [LastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  const handleFirstNamechange = (value) => {
+    setFirstName(value);
+  };
+  const handleLastNamechange = (value) => {
+    setLastName(value);
+  };
   const handleUsernamechange = (value) => {
     setUsername(value);
   };
@@ -17,28 +24,27 @@ function SectionR() {
   const handlePasswordchange = (value) => {
     setPassword(value);
   };
-  
 
-
-  const handlesubmit = () =>{
-    
-const data ={
-    username :username,
-    email: email,
-    password: password,
-    roles: ["student"]
-};
-const url ="http://localhost:5213/api/Auth/Register";
-axios
+  const handlesubmit = () => {
+    const data = {
+      FirstName: FirstName,
+      LastName: LastName,
+      username: username,
+      email: email,
+      password: password,
+      roles: ["student"],
+    };
+    const url = "http://localhost:5213/api/Auth/Register";
+    axios
       .post(url, data)
       .then((response) => {
         alert("Registered Successfully!");
         navigate("/Dashboard");
- }).catch((error)=>{
-    alert(error);
- })
-  
-}
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
   return (
     <div>
       <div class="section section-padding">
@@ -68,6 +74,22 @@ axios
                       <div class="single-form">
                         <input
                           type="text"
+                          placeholder="Fristname"
+                          onChange={(e) =>
+                            handleFirstNamechange(e.target.value)
+                          }
+                        />
+                      </div>
+                      <div class="single-form">
+                        <input
+                          type="text"
+                          placeholder="lastname"
+                          onChange={(e) => handleLastNamechange(e.target.value)}
+                        />
+                      </div>
+                      <div class="single-form">
+                        <input
+                          type="text"
                           placeholder="username"
                           onChange={(e) => handleUsernamechange(e.target.value)}
                         />
@@ -86,38 +108,49 @@ axios
                           onChange={(e) => handlePasswordchange(e.target.value)}
                         />
                       </div>
+
                       <div class="single-form">
-                        <input type="password" placeholder="Confirm Password"  
-        />
-                      </div>
-                      <div class="single-form">  
-                        <button class="btn btn-primary btn-hover-dark w-100" onClick={(e)  => handlesubmit()}>
+                        <button
+                          class="btn btn-primary btn-hover-dark w-100"
+                          onClick={(e) => handlesubmit()}
+                        >
                           Create an account
                         </button>
-                       
                       </div>
                       <div class="row">
-						<div class="col-xl-3  col-sm-6 col-12">
-								<div class="social-boxs">
-									<img  src="assets/images/icon/social-icon-01.svg"  alt="Social Icon"/>
-								</div>	
-						</div>
-						<div class="col-xl-3  col-sm-6 col-12">
-								<div class="social-boxs">
-									<img  src="assets/images/icon/social-icon-02.svg"  alt="Social Icon"/>
-								</div>	
-						</div>
                         <div class="col-xl-3  col-sm-6 col-12">
-								<div class="social-boxs">
-									<img  src="assets/images/icon/social-icon-03.svg"  alt="Social Icon"/>
-								</div>	
-						</div>
+                          <div class="social-boxs">
+                            <img
+                              src="assets/images/icon/social-icon-01.svg"
+                              alt="Social Icon"
+                            />
+                          </div>
+                        </div>
                         <div class="col-xl-3  col-sm-6 col-12">
-								<div class="social-boxs">
-									<img  src="assets/images/icon/social-icon-04.svg"  alt="Social Icon"/>
-								</div>	
-						</div>
-					</div>
+                          <div class="social-boxs">
+                            <img
+                              src="assets/images/icon/social-icon-02.svg"
+                              alt="Social Icon"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-xl-3  col-sm-6 col-12">
+                          <div class="social-boxs">
+                            <img
+                              src="assets/images/icon/social-icon-03.svg"
+                              alt="Social Icon"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-xl-3  col-sm-6 col-12">
+                          <div class="social-boxs">
+                            <img
+                              src="assets/images/icon/social-icon-04.svg"
+                              alt="Social Icon"
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 </div>

@@ -1,6 +1,52 @@
-import React from 'react'
+import React, { useState } from "react";
+import axios from "axios";
 
 function Editstudent() {
+    const[FirstName,setFirstName]= useState('')
+    const[LastName,setLastName] =useState("")
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+   
+  
+    const handleFirstNamechange = (value) => {
+      setFirstName(value);
+    };
+    const handleLastNamechange = (value) => {
+      setLastName(value);
+    };
+    const handleUsernamechange = (value) => {
+      setUsername(value);
+    };
+    const handleEmailchange = (value) => {
+      setEmail(value);
+    };
+    const handlePasswordchange = (value) => {
+      setPassword(value);
+    };
+    
+  
+  
+    const handlesubmit = () =>{
+      
+  const data ={
+     FirstName : FirstName,
+      LastName:LastName,
+      username :username,
+      email: email,
+      password: password,
+      
+  };
+  const url ="http://localhost:5213/api/Auth/Register";
+  axios
+        .post(url, data)
+        .then((response) => {
+          alert("Registered Successfully!");
+        
+   }).catch((error)=>{
+      alert(error);
+   })
+}
   return (
     <div>
        <div class="header">  
@@ -185,13 +231,20 @@ function Editstudent() {
 											<div class="col-12 col-sm-4">  
 												<div class="form-group local-forms">
 													<label >First Name <span class="login-danger"></span></label>
-													<input class="form-control" type="text" placeholder="Enter First Name" />
+													<input class="form-control" type="text" placeholder="Enter First Name" onChange={(e) => handleFirstNamechange(e.target.value)}/>
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label >Last Name <span class="login-danger">*</span></label>
-													<input class="form-control" type="text" placeholder="Enter First Name" />
+													<input class="form-control" type="text" placeholder="Enter last Name"  onChange={(e) => handleLastNamechange(e.target.value)}/>
+												</div>
+											</div>
+                                            <div class="col-12 col-sm-4">
+												<div class="form-group local-forms">
+													<label >userName <span class="login-danger">*</span></label>
+													<input  class="form-control" type="text" placeholder="Enter userName" onChange={(e) => handleUsernamechange(e.target.value)}
+                        />
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
@@ -210,26 +263,13 @@ function Editstudent() {
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label >E-Mail <span class="login-danger">*</span></label>
-													<input class="form-control" type="text" placeholder="Enter Email Address"/>
+													<input class="form-control" type="text" placeholder="Enter Email Address" onChange={(e) => handleEmailchange(e.target.value)}/>
 												</div>
 											</div>
-											<div class="col-12 col-sm-4">
-												<div class="form-group local-forms">
-													<label >Class <span class="login-danger">*</span></label>
-													<select class="form-control select">
-														<option>Please Select Class  </option>
-														<option>12</option>
-														<option>11</option>
-														<option>10</option>
-													  </select>
-												</div>
-											</div>
-										
-											
 											<div class="col-12 col-sm-4">
 												<div class="form-group local-forms">
 													<label >password </label>
-													<input class="form-control" type="password" placeholder="Enter password" />
+													<input class="form-control" type="password" placeholder="Enter password" onChange={(e) => handlePasswordchange(e.target.value)}/>
 												</div>
 											</div>
 											<div class="col-12 col-sm-4">
@@ -244,7 +284,7 @@ function Editstudent() {
 											</div>
 											<div class="col-12">
 												<div class="student-submit">
-													<button type="submit" class="btn btn-primary">Submit</button>
+													<button type="submit" class="btn btn-primary"onClick={(e)  => handlesubmit()}>Submit</button>
 												</div>
 											</div>
 										</div>

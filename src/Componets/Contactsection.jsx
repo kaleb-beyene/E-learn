@@ -70,7 +70,7 @@ function Contactsection() {
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Phone No.</h6>
-                                        <p><a href="tel:88193326867">(88) 193 326 867</a></p>
+                                        <p><a href="tel:88193326867">+2519097490</a></p>
                                     </div>
                                 </div>
                                 
@@ -80,7 +80,7 @@ function Contactsection() {
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Email Address.</h6>
-                                        <p><a href="mailto:edule100@gmail.com">edule100@gmail.com</a></p>
+                                        <p><a href="mailto:e-learning100@gmail.com">e-learning100@gmail.com</a></p>
                                     </div>
                                 </div>
                                
@@ -90,7 +90,7 @@ function Contactsection() {
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Office Address.</h6>
-                                        <p>Talga, Alabama, USA</p>
+                                        <p>Mexico, A.A</p>
                                     </div>
                                 </div>
                                 
