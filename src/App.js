@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Courses from './pages/Courses';
 import CoursesDetails from './pages/Courses-details';
 import Login from './pages/Login';
-import Profile from './pages/Profile';
+
 import Studentcourse from './pages/Studentcourse';
 import Register from './pages/Register';
 import List from './pages/List';
@@ -21,7 +21,6 @@ function App() {
       <Routes>
         <Route index element ={<Home/>}/>
         <Route path="Home"element={<Home/>}/>
-        <Route path="Profile"element={<Profile/>}/>
         <Route path="About"element={<About/>}/>
         <Route path="AfterEnroll"element={<AfterEnroll/>}/>
         <Route path="list"element={<List/>}/>
